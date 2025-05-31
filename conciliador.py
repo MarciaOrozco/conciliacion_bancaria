@@ -1,4 +1,5 @@
 from datetime import date
+from datetime import datetime
 import csv
 import os
 
@@ -14,12 +15,17 @@ try:
             line = line.strip()
             partes = line.split(',')
             if len(partes) != 4:
-                print(f"\nError: Existe una línea inválida en extracto_bancario.csv: {line}.")
+                print(f"Error: Existe una línea inválida en extracto_bancario.csv: {line}.")
                 continue 
             idcuenta, depositos, importe, fecha = partes
             idcuenta = idcuenta.strip('"')
             depositos = depositos.strip('"')
             fecha = fecha.strip('"')
+            try:
+                datetime.strptime(fecha, '%Y-%m-%d')
+            except ValueError:
+                print(f"Error: Fecha inválida en extracto_bancario.csv: {line}.")
+                continue
             try:
                 importe = float(importe)
             except ValueError:
@@ -54,6 +60,11 @@ try:
             idcuenta, importe, fecha = partes
             idcuenta = idcuenta.strip('"')
             fecha = fecha.strip('"')
+            try:
+                datetime.strptime(fecha, '%Y-%m-%d')
+            except ValueError:
+                print(f"Error: Fecha inválida en ventas_sistema.csv: {line}.")
+                continue
             try:
                 importe = float(importe)
             except ValueError:
