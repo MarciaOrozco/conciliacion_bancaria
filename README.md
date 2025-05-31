@@ -13,17 +13,19 @@ Sistema en Python para realizar **conciliaciones bancarias** comparando los dep�
 
 ## Estructura del Proyecto
 
+```
 conciliacion_bancaria/
 ├── datos/
-│ ├── extracto_bancario.csv
-│ └── ventas_sistema.csv
+│   ├── extracto_bancario.csv
+│   └── ventas_sistema.csv
 ├── resultados/
-│ ├── conciliados.csv
-│ ├── ventas_sin_depositar.csv
-│ ├── depositos_sin_registro.csv
-│ └── diferencias_importe.csv
+│   ├── conciliados.csv
+│   ├── ventas_sin_depositar.csv
+│   ├── depositos_sin_registro.csv
+│   └── diferencias_importe.csv
 ├── conciliador.py
 └── README.md
+```
 
 ## Notas importantes para los archivos de entrada(datos/):
 
