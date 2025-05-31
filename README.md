@@ -1,6 +1,8 @@
 # conciliacion_bancaria
 
-Sistema en Python para realizar **conciliaciones bancarias** comparando los depósitos registrados en el extracto bancario con las ventas registradas en el sistema interno de la empresa.
+Materia: PROGRAMACIÓN EN PYTHON
+Alumna: Marcia Orozco
+Actividad: Sistema en Python para realizar **conciliaciones bancarias** comparando los depósitos registrados en el extracto bancario con las ventas registradas en el sistema interno de la empresa.
 
 ## Funcionalidades
 
